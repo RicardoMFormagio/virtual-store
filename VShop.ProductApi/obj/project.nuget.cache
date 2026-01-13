@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lScmEPfwkHs=",
+  "dgSpecHash": "rSC9aG0Vyiw=",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\Estudos\\Curso_API_WEB_DotNet_Udemy\\Loja Virtual com microservicos\\VShop\\VShop.ProductApi\\VShop.ProductApi.csproj",
+  "projectFilePath": "C:\\Projetos\\Estudos\\Curso_API_WEB_DotNet_Udemy\\Virtual Store\\VShop.ProductApi\\VShop.ProductApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ricardo Formagio\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Ricardo Formagio\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.3\\microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
