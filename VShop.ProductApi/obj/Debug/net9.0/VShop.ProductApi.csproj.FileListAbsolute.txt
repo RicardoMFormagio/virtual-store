@@ -265,3 +265,9 @@ C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\ob
 C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\obj\Debug\net9.0\VShop.ProductApi.pdb
 C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\obj\Debug\net9.0\VShop.ProductApi.genruntimeconfig.cache
 C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\obj\Debug\net9.0\ref\VShop.ProductApi.dll
+C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\bin\Debug\net9.0\AutoMapper.dll
+C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
