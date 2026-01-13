@@ -8,7 +8,10 @@ public class Product
     public string? Description { get; set; }
     public long Stock { get; set; }
     public string? ImageURL { get; set; }
-
-    public Category Category { get; set; }
+    //Foreing key
     public int CategoryId { get; set; }
+
+    //Navigation Property
+    public Category Category { get; set; }
+    
 }
