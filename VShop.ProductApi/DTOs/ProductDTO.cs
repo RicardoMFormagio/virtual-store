@@ -24,6 +24,7 @@ public class ProductDTO
     [Range(1, 9999)]
     public long Stock { get; set; }
     public string? ImageURL { get; set; }
+    public string? CategoryName { get; set; }
     public int CategoryId { get; set; }
 
     public Category Category { get; set; }
