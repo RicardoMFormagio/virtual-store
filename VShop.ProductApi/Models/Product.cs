@@ -1,4 +1,6 @@
-﻿namespace VShop.ProductApi.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace VShop.ProductApi.Models;
 
 public class Product
 {
@@ -12,6 +14,7 @@ public class Product
     public int CategoryId { get; set; }
 
     //Navigation Property
+    [JsonIgnore]
     public Category Category { get; set; }
     
 }
