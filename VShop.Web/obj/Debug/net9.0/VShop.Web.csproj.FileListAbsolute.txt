@@ -96,3 +96,4 @@ C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.Web\obj\Debug
 C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.Web\obj\Debug\net9.0\VShop.Web.pdb
 C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.Web\obj\Debug\net9.0\VShop.Web.genruntimeconfig.cache
 C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.Web\obj\Debug\net9.0\ref\VShop.Web.dll
+C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.Web\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

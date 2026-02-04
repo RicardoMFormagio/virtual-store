@@ -271,3 +271,4 @@ C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\bi
 C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
 C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
+C:\Projetos\Estudos\Curso_API_WEB_DotNet_Udemy\Virtual Store\VShop.ProductApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
