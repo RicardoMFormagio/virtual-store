@@ -6,7 +6,7 @@ public interface IProductService
 {
     Task<IEnumerable<ProductViewModel>> GetAllProducts();
     Task<ProductViewModel> FindProductById(int id);
-    Task<ProductViewModel> CreateProduct(ProductViewModel productVM);
-    Task<ProductViewModel> UpdateProduct(ProductViewModel productVM);
+    Task<ProductViewModel> CreateProduct(ProductViewModel productVMRequest);
+    Task<ProductViewModel> UpdateProduct(ProductViewModel productVMRequest);
     Task<bool> DeleteProductById(int id);
 }
