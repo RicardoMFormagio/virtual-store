@@ -87,7 +87,7 @@ public class ProductsController : ControllerBase
             }
             
             await _productService.UpdateProduct(productDto);
-            return Ok();
+            return Ok(productDto);
         }
         catch (Exception e)
         {

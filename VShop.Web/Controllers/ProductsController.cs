@@ -29,7 +29,7 @@ public class ProductsController : Controller
     }
     
     [HttpGet]
-    public async Task<ActionResult> UpdateeProduct(int id)
+    public async Task<ActionResult> UpdateProduct(int id)
     {
         ViewBag.CategoryId = new SelectList(await _categoryService.GetAllCategories(), "CategoryId", "Name");
 
