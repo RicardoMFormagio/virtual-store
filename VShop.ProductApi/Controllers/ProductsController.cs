@@ -76,16 +76,11 @@ public class ProductsController : ControllerBase
         }
     }
 
-    [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateProduct(int id, ProductDTO productDto)
+    [HttpPut]
+    public async Task<IActionResult> UpdateProduct([FromBody] ProductDTO productDto)
     {
         try
         {
-            if (id != productDto.Id)
-            {
-                return BadRequest();
-            }
-
             if (productDto is null)
             {
                 return BadRequest();

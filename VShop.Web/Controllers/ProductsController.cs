@@ -29,6 +29,20 @@ public class ProductsController : Controller
     }
     
     [HttpGet]
+    public async Task<ActionResult> UpdateeProduct(int id)
+    {
+        ViewBag.CategoryId = new SelectList(await _categoryService.GetAllCategories(), "CategoryId", "Name");
+
+        var result = await _productService.FindProductById(id);
+
+        if (result is null)
+        {
+            return View("Error");
+        }
+        return View(result);
+    }
+    
+    [HttpGet]
     public async Task<ActionResult> CreateProduct()
     {
         ViewBag.CategoryId = new SelectList(await _categoryService.GetAllCategories(), "CategoryId", "Name");
@@ -54,5 +68,22 @@ public class ProductsController : Controller
 
         return View(productVMRequest);
     }
+    
+    [HttpPost]
+    public async Task<IActionResult> UpdateProduct(ProductViewModel productVMRequest)
+    {
+        if (ModelState.IsValid)
+        {
+            var result = await _productService.UpdateProduct(productVMRequest);
+
+            if (result != null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+        return View(productVMRequest);
+    }
+    
     
 }
