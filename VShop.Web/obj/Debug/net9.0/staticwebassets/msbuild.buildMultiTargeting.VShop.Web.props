@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\VShop.Web.props" />
-</Project>
