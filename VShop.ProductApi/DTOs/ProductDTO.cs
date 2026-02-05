@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using VShop.ProductApi.Models;
 
 namespace VShop.ProductApi.DTOs;
@@ -27,5 +28,6 @@ public class ProductDTO
     public string? CategoryName { get; set; }
     public int CategoryId { get; set; }
 
-    public Category Category { get; set; }
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public CategoryDTO? Category { get; set; }
 }

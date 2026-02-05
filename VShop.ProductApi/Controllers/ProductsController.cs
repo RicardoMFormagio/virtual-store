@@ -67,7 +67,7 @@ public class ProductsController : ControllerBase
                 return BadRequest("Invalid Data");
             }
             await _productService.AddProduct(productDto);
-            return Created();
+            return CreatedAtAction(nameof(GetProductById), new { id = productDto.Id }, productDto);
         }
         catch (Exception e)
         {
