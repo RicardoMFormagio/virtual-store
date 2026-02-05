@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Projetos\\Estudos\\Curso_API_WEB_DotNet_Udemy\\Virtual Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26E8EB8E-E08A-4980-BE3C-B5FA35DEEB27}|VShop.Web\\VShop.Web.csproj|c:\\projetos\\estudos\\curso_api_web_dotnet_udemy\\virtual store\\vshop.web\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26E8EB8E-E08A-4980-BE3C-B5FA35DEEB27}|VShop.Web\\VShop.Web.csproj|solutionrelative:vshop.web\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26E8EB8E-E08A-4980-BE3C-B5FA35DEEB27}|VShop.Web\\VShop.Web.csproj|c:\\projetos\\estudos\\curso_api_web_dotnet_udemy\\virtual store\\vshop.web\\views\\products\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{26E8EB8E-E08A-4980-BE3C-B5FA35DEEB27}|VShop.Web\\VShop.Web.csproj|solutionrelative:vshop.web\\views\\products\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26E8EB8E-E08A-4980-BE3C-B5FA35DEEB27}|VShop.Web\\VShop.Web.csproj|c:\\projetos\\estudos\\curso_api_web_dotnet_udemy\\virtual store\\vshop.web\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26E8EB8E-E08A-4980-BE3C-B5FA35DEEB27}|VShop.Web\\VShop.Web.csproj|solutionrelative:vshop.web\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26E8EB8E-E08A-4980-BE3C-B5FA35DEEB27}|VShop.Web\\VShop.Web.csproj|c:\\projetos\\estudos\\curso_api_web_dotnet_udemy\\virtual store\\vshop.web\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26E8EB8E-E08A-4980-BE3C-B5FA35DEEB27}|VShop.Web\\VShop.Web.csproj|solutionrelative:vshop.web\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CreateProduct.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\Estudos\\Curso_API_WEB_DotNet_Udemy\\Virtual Store\\VShop.Web\\Views\\Products\\CreateProduct.cshtml",
+              "RelativeDocumentMoniker": "VShop.Web\\Views\\Products\\CreateProduct.cshtml",
+              "ToolTip": "C:\\Projetos\\Estudos\\Curso_API_WEB_DotNet_Udemy\\Virtual Store\\VShop.Web\\Views\\Products\\CreateProduct.cshtml",
+              "RelativeToolTip": "VShop.Web\\Views\\Products\\CreateProduct.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-04T19:16:21.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Projetos\\Estudos\\Curso_API_WEB_DotNet_Udemy\\Virtual Store\\VShop.Web\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "VShop.Web\\Services\\ProductService.cs",
@@ -45,7 +62,7 @@
               "RelativeDocumentMoniker": "VShop.Web\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Projetos\\Estudos\\Curso_API_WEB_DotNet_Udemy\\Virtual Store\\VShop.Web\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "VShop.Web\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T18:32:42.242Z",
               "EditorCaption": ""
