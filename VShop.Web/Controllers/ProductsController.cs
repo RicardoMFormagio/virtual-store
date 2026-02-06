@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using VShop.Web.Models;
+using VShop.Web.Roles;
 using VShop.Web.Services.Contracts;
 
 namespace VShop.Web.Controllers;
@@ -61,6 +63,7 @@ public class ProductsController : Controller
         return View(result);
     }
 
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> CreateProduct(ProductViewModel productVMRequest)
     {
@@ -81,6 +84,7 @@ public class ProductsController : Controller
         return View(productVMRequest);
     }
     
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> UpdateProduct(ProductViewModel productVMRequest)
     {
@@ -97,6 +101,7 @@ public class ProductsController : Controller
         return View(productVMRequest);
     }
     
+    [Authorize(Roles = Role.Admin )]
     [HttpPost(), ActionName("DeleteProduct")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {

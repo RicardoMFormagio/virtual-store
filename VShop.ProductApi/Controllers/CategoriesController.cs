@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using VShop.ProductApi.DTOs;
 using VShop.ProductApi.Services;
+using VShop.Web.Roles;
 
 namespace VShop.ProductApi.Controllers;
 
-
+[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class CategoriesController : ControllerBase
@@ -117,6 +119,7 @@ public class CategoriesController : ControllerBase
         }
     }
     
+    [Authorize(Roles = Role.Admin)]
     [HttpDelete]
     public async Task<IActionResult> DeleteCategory(int id)
     {
