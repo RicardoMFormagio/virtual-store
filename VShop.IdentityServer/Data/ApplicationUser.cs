@@ -1,6 +1,9 @@
-﻿namespace VShop.IdentityServer.Data;
+﻿using Microsoft.AspNetCore.Identity;
 
-public class ApplicationUser
+namespace VShop.IdentityServer.Data;
+
+public class ApplicationUser : IdentityUser
 {
-    
+    public string FirstName { get; set; } = string.Empty;
+    public string LastName { get; set; } = string.Empty;
 }
