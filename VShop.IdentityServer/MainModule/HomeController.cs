@@ -2,7 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using VShop.IdentityServer.Models;
 
-namespace VShop.IdentityServer.Controllers;
+namespace VShop.IdentityServer.MainModule;
 
 public class HomeController : Controller
 {
