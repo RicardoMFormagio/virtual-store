@@ -9,12 +9,14 @@ using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
 using Duende.IdentityServer.Test;
+using Duende.IdentityModel;
 using VShop.IdentityServer.MainModule;
 using VShop.IdentityServer.MainModule.Account;
 using VShop.IdentityServer.MainModule.Consent;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace VShop.IdentityServer.MainModule.Account
 {
@@ -355,7 +357,7 @@ namespace VShop.IdentityServer.MainModule.Account
                 var idp = User.FindFirst(JwtClaimTypes.IdentityProvider)?.Value;
                 if (idp != null && idp != Duende.IdentityServer.IdentityServerConstants.LocalIdentityProvider)
                 {
-                    var providerSupportsSignout = await HttpContext.GetSchemeSupportsSignOutAsync(idp);
+                    var providerSupportsSignout = await GetSchemeSupportsSignOutAsync(idp);
                     if (providerSupportsSignout)
                     {
                         if (vm.LogoutId == null)
@@ -372,6 +374,13 @@ namespace VShop.IdentityServer.MainModule.Account
             }
 
             return vm;
+        }
+
+        private async Task<bool> GetSchemeSupportsSignOutAsync(string scheme)
+        {
+            var handlerProvider = HttpContext.RequestServices.GetRequiredService<IAuthenticationHandlerProvider>();
+            var handler = await handlerProvider.GetHandlerAsync(HttpContext, scheme);
+            return handler is IAuthenticationSignOutHandler;
         }
     }
 }

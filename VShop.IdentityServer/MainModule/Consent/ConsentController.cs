@@ -9,12 +9,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System;
+using Duende.IdentityModel;
 using Duende.IdentityServer.Events;
 using Duende.IdentityServer.Extensions;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Validation;
-using IdentityModel;
 using VShop.IdentityServer.MainModule;
 
 namespace VShop.IdentityServer.MainModule.Consent

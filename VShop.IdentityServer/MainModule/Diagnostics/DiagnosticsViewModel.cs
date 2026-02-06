@@ -2,11 +2,13 @@
 // See LICENSE in the project root for license information.
 
 
-using IdentityModel;
+
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.WebUtilities;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
+using Duende.IdentityModel;
 
 namespace VShop.IdentityServer.MainModule.Diagnostics
 {
@@ -19,7 +21,7 @@ namespace VShop.IdentityServer.MainModule.Diagnostics
             if (result.Properties.Items.ContainsKey("client_list"))
             {
                 var encoded = result.Properties.Items["client_list"];
-                var bytes = Base64Url.Decode(encoded);
+                var bytes = WebEncoders.Base64UrlDecode(encoded);
                 var value = Encoding.UTF8.GetString(bytes);
 
                 Clients = JsonSerializer.Deserialize<string[]>(value);

@@ -8,6 +8,7 @@ using Duende.IdentityServer.Events;
 using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
 using Duende.IdentityServer.Test;
+using Duende.IdentityModel;
 using VShop.IdentityServer.MainModule;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
