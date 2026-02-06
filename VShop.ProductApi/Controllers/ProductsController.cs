@@ -96,7 +96,7 @@ public class ProductsController : ControllerBase
         }
     }
     
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteProduct(int id)
     {
         try

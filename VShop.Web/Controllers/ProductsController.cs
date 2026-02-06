@@ -29,6 +29,13 @@ public class ProductsController : Controller
     }
     
     [HttpGet]
+    public async Task<ActionResult> CreateProduct()
+    {
+        ViewBag.CategoryId = new SelectList(await _categoryService.GetAllCategories(), "CategoryId", "Name");
+        return View();
+    }
+    
+    [HttpGet]
     public async Task<ActionResult> UpdateProduct(int id)
     {
         ViewBag.CategoryId = new SelectList(await _categoryService.GetAllCategories(), "CategoryId", "Name");
@@ -43,10 +50,15 @@ public class ProductsController : Controller
     }
     
     [HttpGet]
-    public async Task<ActionResult> CreateProduct()
+    public async Task<ActionResult> DeleteProduct(int id)
     {
-        ViewBag.CategoryId = new SelectList(await _categoryService.GetAllCategories(), "CategoryId", "Name");
-        return View();
+        var result = await _productService.FindProductById(id);
+
+        if (result is null)
+        {
+            return View("Error");
+        }
+        return View(result);
     }
 
     [HttpPost]
@@ -83,6 +95,20 @@ public class ProductsController : Controller
         }
 
         return View(productVMRequest);
+    }
+    
+    [HttpPost(), ActionName("DeleteProduct")]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        
+        var result = await _productService.DeleteProductById(id);
+
+        if (!result)
+        {
+            return View("Error");
+        }
+
+        return RedirectToAction(nameof(Index));
     }
     
     
