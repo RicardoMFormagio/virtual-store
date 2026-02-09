@@ -96,11 +96,11 @@ public class DatabaseIdentityServerInitialize : IDatabaseSeedInitializer
             };
             
             //cria o usuário client e atribui senha
-            IdentityResult resultAdmin = _userManager.CreateAsync(client, "Numsey#2022").Result;
-            if (resultAdmin.Succeeded)
+            IdentityResult resultClient = _userManager.CreateAsync(client, "Numsey#2022").Result;
+            if (resultClient.Succeeded)
             {
                 //inclui o usuário client ao perfil client
-                _userManager.AddToRoleAsync(client, IdentityConfiguration.Admin).Wait();
+                _userManager.AddToRoleAsync(client, IdentityConfiguration.Client).Wait();
                 
                 //inclui as claims do usuário client 
                 var clientClaims = _userManager.AddClaimsAsync(client, [
