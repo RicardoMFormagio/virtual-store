@@ -30,7 +30,7 @@ public class HomeController : Controller
     [Authorize]
     public async Task<IActionResult> Login()
     {
-        var accessToken = await HttpContext.GetTokenAsync("acess_token");
+        var accessToken = await HttpContext.GetTokenAsync("access_token");
         return RedirectToAction(nameof(Index));
     }
 
