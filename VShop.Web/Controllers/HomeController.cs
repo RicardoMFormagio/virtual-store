@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using VShop.Web.Models;
 
@@ -23,5 +25,17 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+    [Authorize]
+    public async Task<IActionResult> Login()
+    {
+        var accessToken = await HttpContext.GetTokenAsync("acess_token");
+        return RedirectToAction(nameof(Index));
+    }
+
+    public IActionResult Logout()
+    {
+        return SignOut("Cookies", "oidc");
     }
 }

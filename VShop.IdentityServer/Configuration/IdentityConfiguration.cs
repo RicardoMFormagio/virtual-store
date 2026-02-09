@@ -42,15 +42,15 @@ public class IdentityConfiguration
                 ClientId = "vshop",
                 ClientSecrets = { new Secret("abracadabra#simsalabim".Sha256()) },
                 AllowedGrantTypes = GrantTypes.Code, //via código
-                RedirectUris = { "https://localhost:7165/signin-oidc" }, //login
-                PostLogoutRedirectUris = { "https://localhost:7165/signout-callback-oidc" }, //login
+                RedirectUris = { "https://localhost:7036/signin-oidc" }, //login
+                PostLogoutRedirectUris = { "https://localhost:7036/signout-callback-oidc" }, //login
                 AllowedScopes = new List<string>
                 {
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
                     IdentityServerConstants.StandardScopes.Email,
+                    "vshop"
                 }
             }
-
         };
 }

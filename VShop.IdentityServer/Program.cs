@@ -59,12 +59,12 @@ app.MapControllerRoute(
 
 app.Run();
 
-void SeedDatabaseIdentityServer(IApplicationBuilder app)
+void SeedDatabaseIdentityServer(IApplicationBuilder app1)
 {
-    using (var serviceScope = app.ApplicationServices.CreateScope())
+    using (var serviceScope = app1.ApplicationServices.CreateScope())
     {
         var initRolesUsers = serviceScope.ServiceProvider.GetService<IDatabaseSeedInitializer>();
-        initRolesUsers.InitializeSeedRoles();
-        initRolesUsers.InitializeSeedUsers();
+        initRolesUsers?.InitializeSeedRoles();
+        initRolesUsers?.InitializeSeedUsers();
     }
 }
