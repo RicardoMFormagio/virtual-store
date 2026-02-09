@@ -57,6 +57,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddAutoMapper(cfg => { }, Assembly.GetExecutingAssembly());
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -87,6 +92,8 @@ builder.Services.AddAuthorization(options =>
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+app.UseCors("CorsPolicy");
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
