@@ -18,6 +18,7 @@ public class ProductsController : ControllerBase
         _productService = productService;
     }
     
+    [AllowAnonymous]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAllProducts()
     {
@@ -39,6 +40,7 @@ public class ProductsController : ControllerBase
         
     }
     
+    [AllowAnonymous] 
     [HttpGet("{id}")]
     public async Task<ActionResult<ProductDTO>> GetProductById(int id)
     {
@@ -59,6 +61,7 @@ public class ProductsController : ControllerBase
         
     }
 
+    [Authorize(Roles = Role.Admin)]
     [HttpPost]
     public async Task<IActionResult> AddProduct([FromBody] ProductDTO productDto)
     {
@@ -78,6 +81,7 @@ public class ProductsController : ControllerBase
         }
     }
 
+    [Authorize(Roles = Role.Admin)]
     [HttpPut]
     public async Task<IActionResult> UpdateProduct([FromBody] ProductDTO productDto)
     {
