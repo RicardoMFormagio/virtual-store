@@ -1,7 +1,9 @@
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using VShop.CartApi.Context;
+using VShop.CartApi.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -78,6 +80,9 @@ builder.Services.AddAuthorization(options =>
         policy.RequireClaim("scope", "vshop");
     });
 });
+
+builder.Services.AddAutoMapper(cfg => { }, Assembly.GetExecutingAssembly());
+builder.Services.AddScoped<ICartRepository, CartRepository>();
 
 var app = builder.Build();
 
